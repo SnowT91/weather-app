@@ -25,6 +25,12 @@ A simmple weather application built with HTML, CSS and JavaScript using the Open
 
 This project was created to practice working with APIs, asynchronous JavaScript, DOM manipulation, and error handling.
 
+## Live Demo
+
+[Open Project](https://weather-app-archyteam.netlify.app)
+
 ## Screenshot
 
 ![Weather App Screenshot](images/screenshot.png)
+
+> Note: This project uses a client-side API key for educational purposes.
