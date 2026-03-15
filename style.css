@@ -41,6 +41,11 @@ input {
 button {
   padding: 10px 14px;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  opacity: 0.85;
 }
 
 .weather-card {
