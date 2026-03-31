@@ -7,23 +7,38 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="weather-app">
     <h1>Weather App</h1>
 
     <div class="search-box">
-      <input id="cityInput" type="text" placeholder="Enter city name" />
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
       <button id="searchBtn">Search</button>
     </div>
 
-    <p id="loadingMessage" class="hidden">Loading weather data...</p>
-    <div id="weatherResult" class="weather-card hidden">
-      <h2 id="cityName"></h2>
-      <img id="weatherIcon" alt="Weather icon" />
-      <p id="temperature"></p>
-      <p id="description"></p>
+    <div class="extra-controls">
+      <button id="locationBtn">Use My Location</button>
+      <button id="unitToggle">Switch to °F</button>
     </div>
 
-    <p id="errorMessage" class="error hidden"></p>
+    <p id="message" class="message"></p>
+
+    <div id="weatherResult" class="weather-result hidden">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" src="" alt="Weather icon" />
+      <p id="temperature"></p>
+      <p id="description"></p>
+      <p id="feelsLike"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+    </div>
+
+    <div class="history-box">
+      <div class="history-header">
+        <h3>Recent Searches</h3>
+        <button id="clearHistoryBtn">Clear History</button>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
   </div>
 
   <script src="script.js"></script>
