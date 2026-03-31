@@ -45,7 +45,7 @@ h1 {
   font-size: 16px;
 }
 
-.search-box button {
+.search-box button,
 .extra-controls button,
 #clearHistoryBtn {
   padding: 10px 14px;
@@ -125,7 +125,7 @@ h1 {
  list-style: none;
 }
 
-.historyList li {
+#historyList li {
   background: #eef2ff;
   margin-bottom: 8px;
   padding: 10px;

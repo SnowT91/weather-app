@@ -51,7 +51,7 @@ async function getWeatherByCity(city) {
   weatherResult.classList.add("hidden");
 
   try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${currentUnit}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${currentUnit}`;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -75,8 +75,8 @@ async function getWeatherByCoords(lat, lon) {
   showMessage("Fetching weather for your location...");
   weatherResult.classList.add("hidden");
 
-  try
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${currentUnit}`;
+  try {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${currentUnit}`;
     const response = await fetch(url);
   
     if (!response.ok) {
@@ -84,9 +84,7 @@ async function getWeatherByCoords(lat, lon) {
     }
 
     const data = await response.json();
-
     lastCity = data.name;
-    saveSearch(data.name);
     displayWeather(data);
     saveSearch(data.name);
     renderHistory();
@@ -118,7 +116,7 @@ function displayWeather(data) {
 }
 
 function saveSearch(city) {
-  let history = JSON.parse(localStorage.getItem("weatherSearchHistory")) || [];
+  let history = JSON.parse(localStorage.getItem("weatherHistory")) || [];
 
   city = city.trim();
 
@@ -170,7 +168,7 @@ function toggleUnit() {
 }
 
 function useMyLocation() {
-  if (navigator.geolocation) {
+  if (!navigator.geolocation) {
     showMessage("Geolocation is not supported by your browser.", "error");
     return;
   }
@@ -187,7 +185,7 @@ function useMyLocation() {
 }
 
 searchBtn.addEventListener("click", () => {
-  getWeather(cityInput.value);
+  getWeatherByCity(cityInput.value);
 });
 
 cityInput.addEventListener("keydown", (e) => {
