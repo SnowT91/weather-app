@@ -1,29 +1,28 @@
-# Weather App
+# Weather App V2
 
-A simmple weather application built with HTML, CSS and JavaScript using the OpenWeather API.
+A responsive weather application built with HTML, CSS and JavaScript.
 
 ## Features
 
 - Search weather by city name
-- Display current temperature
-- Show weather description
-- Show weather icon
-- Eroor handling for invalid city names
-- Loading state while fetching data
 - Search by pressing Enter
+- Use current location (Geolocation API)
+- Switch between Celcius and Fahrenheit
+- Loading state while fetching data
+- Error handling for invalid city names
+- Weather icon display
+- Recent search history with localStorage
+- Clear search history button
+- Responsive design
 
-## Technologies
+## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
-- Fetch API
-- Async/Await
 - OpenWeather API
-
-## Project Goal
-
-This project was created to practice working with APIs, asynchronous JavaScript, DOM manipulation, and error handling.
+- Geolocation API
+- localStorage
 
 ## Live Demo
 
@@ -33,4 +32,14 @@ This project was created to practice working with APIs, asynchronous JavaScript,
 
 ![Weather App Screenshot](images/screenshot.png)
 
-> Note: This project uses a client-side API key for educational purposes.
+## How to Run
+
+1. Clone the repository
+2. Open `index.html` in your browser
+
+## Future Improvements
+
+- 5-day forecast
+- Better weather animations
+- Dark mode
+- Auto-suggestions for cities
